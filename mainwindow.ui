@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>629</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Laser Controller</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="mainLayout">
+      <item>
+       <layout class="QVBoxLayout" name="positioningLayout">
+        <item>
+         <widget class="QGroupBox" name="navGroupBox">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Positioning</string>
+          </property>
+          <widget class="QPushButton" name="ydecButton">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>85</y>
+             <width>40</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Y-</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="xdecButton">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>135</y>
+             <width>40</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>X-</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="xincButton">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>35</y>
+             <width>40</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>X+</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="yincButton">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>85</y>
+             <width>40</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Y+</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="laserCheckbox">
+          <property name="text">
+           <string>Laser</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="positioningSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="outputLayout">
+        <item>
+         <widget class="QTextBrowser" name="console"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="controlLayout">
+        <item>
+         <widget class="QPushButton" name="selectFileButton">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Select File</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="filenameLabel">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>No file selected</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="startButton">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stopButton">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Stop</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="settingsGroupBox">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>153</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Settings</string>
+          </property>
+          <widget class="QDoubleSpinBox" name="xmulSpinBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>81</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="ymulSpinBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>81</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="speedSpinBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>110</y>
+             <width>81</width>
+             <height>32</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>3000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>100.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>500.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="xMultiplierLabel">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>38</y>
+             <width>81</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>X Multiplier</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="yMultiplierLabel">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>78</y>
+             <width>81</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Y Multiplier</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="speedLabel">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>118</y>
+             <width>81</width>
+             <height>18</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Speed</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <spacer name="controlSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

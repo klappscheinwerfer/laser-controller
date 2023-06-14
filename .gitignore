@@ -1,0 +1,7 @@
+*.stash
+Makefile
+
+# Directories
+/.vscode
+/build
+/deprecated
